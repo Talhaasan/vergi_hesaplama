@@ -66,48 +66,48 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
       child: new Column(
         children: <Widget>[
           SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-          Text("KDV Dahil",
+          Text("VAT Included",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.normal,
                 fontSize: 21,
               )),
-          Text("İşlem Tutarı: " + _islemTutari.toStringAsFixed(2),
+          Text("Transaction Amount: " + _islemTutari.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 18,
               )),
-          Text("KDV Tutarı: " + _kdvTutari.toStringAsFixed(2),
+          Text("VAT Amount: " + _kdvTutari.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 18,
               )),
-          Text("Toplam Tutar: " + _toplamTutar.toStringAsFixed(2),
+          Text("Total Amount: " + _toplamTutar.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 18,
               )),
-          Text("Matrah Tutarı: " + _matrahTutari.toStringAsFixed(2),
+          Text("Basis Amount: " + _matrahTutari.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 18,
               )),
           SizedBox(height: MediaQuery.of(context).size.height * 0.035),
-          Text("KDV Hariç",
+          Text("VAT Excluded",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.normal,
                 fontSize: 21,
               )),
-          Text("İşlem Tutarı: " + islemTutari.toStringAsFixed(2),
+          Text("Transaction Amount: " + islemTutari.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 18,
               )),
-          Text("KDV Tutarı: " + kdvTutari.toStringAsFixed(2),
+          Text("VAT Amount: " + kdvTutari.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 18,
               )),
-          Text("Toplam Tutar: " + toplamTutar.toStringAsFixed(2),
+          Text("Total Amount: " + toplamTutar.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 18,
               )),
-          Text("Matrah Tutarı: " + matrahTutari.toStringAsFixed(2),
+          Text("Basis Amount: " + matrahTutari.toStringAsFixed(2),
               style: TextStyle(
                 fontSize: 18,
               )),
@@ -125,7 +125,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
             flex: 1,
             fit: FlexFit.tight,
             child: RaisedButton(
-                child: Text("Temizle"),
+                child: Text("Clear"),
                 onPressed: () {
                   temizle();
                   setState(() {
@@ -141,7 +141,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
               flex: 1,
               fit: FlexFit.tight,
               child: RaisedButton(
-                  child: Text("Hesapla"),
+                  child: Text("Calculate"),
                   onPressed: () {
                     kdvDahilOraniniHesapla(tutar, kdvOrani);
                     kdvHaricOraniniHesapla(tutar, kdvOrani);
@@ -240,7 +240,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
                 width: 2.0,
               ),
             ),
-            labelText: 'KDV Oranını Girin', //Matrah hesaplaması için
+            labelText: 'Enter VAT Rate', //Matrah hesaplaması için
             labelStyle: TextStyle(
                 color: myFocusNode.hasFocus ? Colors.black : Colors.black),
             focusedBorder: OutlineInputBorder(
@@ -272,7 +272,7 @@ class _KDVCalculatorPageState extends State<KDVCalculatorPage> {
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(color: Colors.black87, width: 2.0)),
-            labelText: 'Tutarı Girin',
+            labelText: 'Enter Amount',
             labelStyle: TextStyle(
                 color: myFocusNode.hasFocus ? Colors.black : Colors.black),
 

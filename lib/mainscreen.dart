@@ -23,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
-        title: Text("KDV Hesaplama"),
+        title: Text("KDV Calculator"),
         backgroundColor: Colors.black87,
       ),
       body: Container(
@@ -32,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                  child: Text("  Hesap Makinesi  "),
+                  child: Text("       Calculator      "),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -45,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 10)),
               SizedBox(height: 10),
               RaisedButton(
-                  child: Text("  KDV Hesaplama  "),
+                  child: Text("  KDV Calculator  "),
                   onPressed: () {
                     Navigator.push(
                       context,

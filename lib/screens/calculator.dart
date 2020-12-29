@@ -6,7 +6,7 @@ class Calculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hesap Makinesi',
+      title: 'Calculator',
       // theme: ThemeData(primarySwatch: Colors.blue),
     );
   }
@@ -115,7 +115,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
     return Scaffold(
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
-          title: Text('Hesap Makinesi'), backgroundColor: Colors.black87),
+          title: Text('Calculator'), backgroundColor: Colors.black87),
       body: Column(
         children: <Widget>[
           Container(
